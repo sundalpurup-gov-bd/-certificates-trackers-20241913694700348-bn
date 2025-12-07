@@ -1,0 +1,411 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>বাংলা ওয়ারিশ সনদপত্র</title>
+    <link href="https://sundalpurup.gov.bd/fonts/font.css" rel="stylesheet">
+    <style>
+        * {
+            font-family: 'SolaimanLipi', Arial, sans-serif !important;
+        }
+
+        @media print {
+            * {
+                -webkit-print-color-adjust: exact;
+            }
+        }
+
+        .main-container {
+            height: 11.5in;
+            width: 8.5in;
+            margin: 0px auto;
+            position: relative;
+            box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            -webkit-box-sizing: border-box;
+        }
+
+        .certificate {
+            padding: 10px;
+            height: 100%;
+            position: relative;
+            border: 2px solid gray;
+        }
+
+        .certificate-header {
+            position: relative;
+            display: flex;
+            width: 100%;
+            height: 165px;
+            justify-content: space-between;
+        }
+
+        .certificate-footer {
+            margin-top: 30px;
+        }
+
+        .qr_info {
+            display: flex;
+            width: 100%;
+            justify-content: space-between;
+            margin-top: 130px;
+        }
+
+        .union_name {
+            text-align: center;
+        }
+
+        .union_name h1 {
+            margin-bottom: 0px;
+        }
+
+        .headline {
+            padding: 0px 5px;
+            font-size: 24px;
+            border: 1px solid;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+
+        .watermark {
+            background: url(https://sundalpurup.gov.bd/logo/wexpired.png)no-repeat center;
+            padding-bottom: 15px;
+            background-size: 60%;
+        }
+
+        .qr_code,
+        .profile,
+        .qr_code img,
+        .profile img {
+            width: 120px !important;
+            height: 120px !important;
+            border: 2px solid gray !important;
+            padding: 0px;
+        }
+
+        .license_row {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .license_no {
+            font-size: 22px;
+            font-weight: bold;
+        }
+
+        .license_no span {
+            border-bottom: 1px dashed gray;
+            padding: 5px;
+            letter-spacing: 10px;
+        }
+
+        .date {
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        .certificate-body {
+            margin-top: 10px;
+            font-size: 18px;
+            /* line-height: 30px; */
+        }
+
+        table {
+            font-size: 18px;
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        table tr td {
+            vertical-align: top;
+            line-height: 30px;
+        }
+
+        .sign {
+            display: flex;
+            justify-content: space-between;
+            font-size: 20px;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        .col {
+            width: 100%;
+        }
+
+        .table-warish tr td {
+            line-height: normal !important;
+        }
+
+        .wrapper {
+            margin: 0 auto;
+            width: 785px;
+            padding: 0px;
+            height: 1100px;
+            overflow: hidden;
+        }
+
+        @media print {
+            .no-print,
+            .no-print * {
+                visibility: hidden;
+            }
+            .wrapper {
+                margin: 0 auto;
+                width: 785px;
+                border: 16px solid transparent;
+                border-image: url(https://sundalpurup.gov.bd/logo/border.png) 20% round;
+                padding: 0px;
+                height: 1150px;
+                overflow: hidden;
+            }
+            #cert {
+                padding-top: 40px;
+            }
+        }
+
+        .wrapper {
+            margin: 0 auto;
+            height: 1100px;
+            position: relative;
+            background-size: 70%;
+            width: 785px;
+        }
+
+        .issue {
+            border: 1px solid black;
+            line-height: 20px;
+            padding: 5px;
+            text-align: left;
+            margin-top: 28px;
+        }
+
+        .cert-body {
+            border: 1px solid gray;
+            margin-top: 10px;
+        }
+
+        body {
+            background-color: white;
+        }
+
+        #main_second {
+            height: 11.5in;
+            width: 8.5in;
+            float: left;
+            position: relative;
+            box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            -webkit-box-sizing: border-box;
+        }
+
+        #main {
+            height: 11.5in;
+            width: 8.5in;
+            background-color: white;
+            margin: 0px auto;
+            overflow: visible;
+        }
+
+        .print-certificate {
+            width: 77px;
+            height: 76px;
+            position: fixed;
+            padding: 5px;
+            bottom: 30px;
+            right: 30px;
+            color: #ffffff;
+            font-size: 2em;
+            text-align: center;
+            line-height: 36px;
+            background-color: #D3D3D3;
+            -moz-border-radius: 20px;
+            -webkit-border-radius: 20px;
+            border-radius: 20px;
+            z-index: 9999;
+        }
+
+        .print-certificate img {
+            width: 70px;
+            height: 70px;
+            margin-top: 5px;
+            cursor: pointer;
+        }
+
+        p {
+            /* padding: 20px; */
+            text-align: justify;
+            font-size: 18px;
+            margin: 5px 0px;
+        }
+
+        /* .qr_logo {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+        } */
+
+        .qr_logo img {
+            width: 120px !important;
+            height: 120px !important;
+            padding: 0px;
+        }
+
+        .isu {
+            position: absolute;
+            top: 145px;
+            left: 40px;
+            border: 1px solid black;
+            padding: 2px 5px;
+            font-weight: bold;
+        }
+
+        .cert-body {
+            border-bottom: none;
+        }
+
+        @media print {
+            .backbtn,
+            .printbtn {
+                display: none;
+            }
+        }
+
+        .backbtn {
+            font-size: 29px;
+            text-decoration: none;
+            border: 1px solid;
+            padding: 0px 5px;
+            background: black;
+            font-weight: bold;
+            color: yellow;
+            text-align: center;
+            position: absolute;
+            top: 23px;
+            left: 25px;
+            border-radius: 20px;
+            vertical-align: middle;
+            padding: 14px;
+        }
+
+        .printbtn {
+            font-size: 29px;
+            text-decoration: none;
+            border: 1px solid;
+            padding: 0px 5px;
+            background: black;
+            font-weight: bold;
+            color: yellow;
+            text-align: center;
+            position: absolute;
+            top: 120px;
+            left: 25px;
+            border-radius: 20px;
+            vertical-align: middle;
+            padding: 14px;
+        }
+    </style>
+</head>
+
+<body>
+    <a href="https://sundalpurup.gov.bd/tracking" class="backbtn">Back</a>
+    <a href="#" class="printbtn" onclick="window.print();">Print</a>
+
+    <div class="main-container watermark">
+        <div class="certificate">
+            <div class="certificate-header  ">
+                <div class="qr_logo"><img src="https://sundalpurup.gov.bd/logo/logo.png" height="100px" width="100px" /></div>
+                <div class="union_name">
+                    <h1 style="font-size: 30px; margin-top:0px;">১নং সুন্দলপুর মডেল ইউনিয়ন পরিষদ</h1>
+                    <div style="font-size:16px; font-weight:bold;">
+                        ডাকঘর: চাঁদগাও (৩৫১৭), উপজেলা: দাউদকান্দি, জেলা: কুমিল্লা<br /> ওয়েব সাইট: www.sundalpurup.gov.bd
+                        <br /> ইমেইল: sundalpurup883.cum@gmail.com, মোবাইল: ০১৩১৮৩৭৭৮৮৩ </div>
+                    <div class="headline">ওয়ারিশ সনদপত্র</div>
+                </div>
+                <div class="profile">
+                </div>
+            </div>
+            <div class="license_row">
+                <div class="license_no">সনদ নং <span>২০২৪১৯১৩৬৯৪৭০০৩৪৮</span></div>
+                <div class="date">তারিখঃ ০৭-০৮-২০২৫</div>
+            </div>
+            <div class="certificate-body">
+
+                <p style="text-indent: 30px; margin-top:18px;">
+                    এই মর্মে প্রত্যয়ণ করা যাইতেছে যে,
+                    <b>মৃত আব্দুর রশিদ</b>, স্ত্রীর নামঃ <b>মৃত জাবেদা খাতুন</b>, পিতাঃ <b>মৃত আবুল হোসেন</b>, মাতাঃ <b>মৃত আমির জান বিবি</b>, বর্তমান ঠিকানাঃ গ্রামঃ ঢাকারগাঁও, ওয়ার্ড নং-০৩, ডাকঘরঃ হাসানপুর কলেজ-৩৫১৬, থানাঃ দাউদকান্দি, উপজেলাঃ দাউদকান্দি,
+                    জেলাঃ কুমিল্লা, স্থায়ী ঠিকানাঃ গ্রামঃ ঢাকারগাঁও, ডাকঘরঃ হাসানপুর কলেজ-৩৫১৬, থানাঃ দাউদকান্দি, উপজেলাঃ দাউদকান্দি, জেলাঃ কুমিল্লা। মৃত্যু তারিখঃ ০৫-০৮-১৯৮৯।
+                </p>
+
+                <p>
+                    অত্র ইউনিয়নের স্থায়ী অধিবাসী ছিলেন। মৃত্যুকালে তিনি নিম্নলিখিত ওয়ারিশগনকে রাখিয়া মৃত্যু বরণ করেন।
+                </p>
+
+                <table class="table-warish" border="1">
+                    <thead>
+                        <tr>
+                            <th>ক্রম</th>
+                            <th>নাম</th>
+                            <th>সম্পর্ক</th>
+                            <th>বয়স</th>
+                            <th>এনআইডি</th>
+                            <th>মোবাইল নং</th>
+                            <th>জীবিত/মৃত</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td style="text-align: center;">১</td>
+                            <td>জামাল মোল্লা</td>
+                            <td style="text-align: center;">ছেলে</td>
+                            <td style="text-align: center;">০৫/০৮/১৯৫১</td>
+                            <td style="text-align: center;"></td>
+                            <td style="text-align: center;">০১৮৭৩৯৭৬০০১</td>
+                            <td style="text-align: center;">মৃত</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">২</td>
+                            <td>আনোয়ারা বেগম</td>
+                            <td style="text-align: center;">মেয়ে</td>
+                            <td style="text-align: center;">২৫/০১/১৯৫৩</td>
+                            <td style="text-align: center;"></td>
+                            <td style="text-align: center;">০১৬৩১৭৪৬০০০</td>
+                            <td style="text-align: center;">মৃত</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">৩</td>
+                            <td>মোসাঃ আনজুমান বেগম</td>
+                            <td style="text-align: center;">মেয়ে</td>
+                            <td style="text-align: center;">০৫/০৪/১৯৫৭</td>
+                            <td style="text-align: center;">১৯১৩৬৩৮৮১০৩৯৭</td>
+                            <td style="text-align: center;"></td>
+                            <td style="text-align: center;">জীবিত</td>
+                        </tr>
+
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <th colspan="7">উত্তরাধিকারীর সংখ্যা <b>৩</b> জন</th>
+                        </tr>
+                    </tfoot>
+                </table>
+                <p style="text-indent: 30px;">আমি মৃতের বিদ্বেহী আত্মার মাগফেরাত এবং উওরাধিকারীগণের মঙ্গল কামনা করি।</p>
+                <div class="sign" style="font-size: 16px; text-align:left; margin-top:15px;font-weight:normal;">
+                    <div class="col">তদন্তকারীঃ <b>মতিউর রহমান</b></div>
+                    <div class="col">আবেদনকারীঃ <b>মোঃ আল মামুন মোল্লা</b></div>
+                    <div class="col">পিতা/স্বামীঃ <b>মৃত জামাল মোল্লা</b></div>
+                </div>
+            </div>
+            <div class="certificate-footer">
+                <div class="sign">
+                    <div class="col">
+                        <img style="width: 140px;" src="https://sundalpurup.gov.bd/logo/expired.png" alt="Expired">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
